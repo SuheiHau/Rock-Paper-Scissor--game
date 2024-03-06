@@ -22,17 +22,16 @@ const showWinner = (userWin,userChoice,compChoice) => {
     if (userWin) {
         userScore ++
         userScorePara.innerText=userScore
-       // console.log("You Win");
         msg.innerText=`You Win  Your ${userChoice} beats ${compChoice}`
         msg.style.backgroundColor="green"
     } else {
-        compScore ++
-        compScorePar.innerText=userScore
-       // console.log("You Loose");
+        compScore ++ // Fixed variable name from "userScore" to "compScore"
+        compScorePar.innerText=compScore // Fixed variable name from "userScore" to "compScore"
         msg.innerText=`You Loose ${compChoice} beats ${userChoice}`
         msg.style.backgroundColor="red"
     }
 };
+
 
 const playGame = (userChoice) => {
     console.log("user choice=", userChoice);
